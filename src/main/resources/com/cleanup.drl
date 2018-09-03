@@ -1,0 +1,17 @@
+package com.fsi.creditcarddisputecase;
+
+rule "Clear Q"
+ruleflow-group "cleanup-questions"
+when
+    $addInfo : AdditionalInformation()
+then
+    retract($addInfo);
+end
+
+rule "Clear CardHolder"
+ruleflow-group "cleanup-cardholder"
+when
+    $ch : Cardholder()
+then
+    retract($ch);
+end  
