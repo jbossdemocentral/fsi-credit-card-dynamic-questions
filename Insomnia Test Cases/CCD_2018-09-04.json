@@ -1,0 +1,950 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-09-04T00:56:14.891Z",
+	"__export_source": "insomnia.desktop.app:v6.0.2",
+	"resources": [
+		{
+			"_id": "wrk_594e100f22ef47829892a62a53dcf97e",
+			"created": 1535958265978,
+			"description": "",
+			"modified": 1535958265978,
+			"name": "CCD",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_80470db6c1f84bb78542a3900d50c24d",
+			"color": null,
+			"created": 1535958266007,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1535958266007,
+			"modified": 1535958266007,
+			"name": "New Environment",
+			"parentId": "wrk_594e100f22ef47829892a62a53dcf97e",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_735d331e392743e78efb0ca42fc1b876",
+			"cookies": [],
+			"created": 1535958266011,
+			"modified": 1535958266011,
+			"name": "Default Jar",
+			"parentId": "wrk_594e100f22ef47829892a62a53dcf97e",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_a16cd9830e294f0496c47f7d302ed2f5",
+			"created": 1536021875132,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1536021875132,
+			"modified": 1536021875132,
+			"name": "CCD",
+			"parentId": "wrk_594e100f22ef47829892a62a53dcf97e",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_4cf9554a643043fab57d84b858f7164e",
+			"created": 1536021904719,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1536022081630,
+			"modified": 1536022167100,
+			"name": "Scenario 1 - MINOR - VA - Silver",
+			"parentId": "fld_a16cd9830e294f0496c47f7d302ed2f5",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_f568a3174aac47b6a569b62150719c78",
+			"created": 1536022081580,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1536022081580,
+			"modified": 1536022081580,
+			"name": "Scenario 2 - Minor - CA - Silver",
+			"parentId": "fld_a16cd9830e294f0496c47f7d302ed2f5",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_1528e089f8c44d7fa4d19950dd317b65",
+			"created": 1536022192833,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1536022081530,
+			"modified": 1536022196736,
+			"name": "Scenario 3 - Minor - Other - Silver",
+			"parentId": "fld_a16cd9830e294f0496c47f7d302ed2f5",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_afa85f81f55e43adaea6ce577074157c",
+			"created": 1536022305808,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1536022081480,
+			"modified": 1536022311556,
+			"name": "Scenario 4 -VA - GOLD-NOMerchandise",
+			"parentId": "fld_a16cd9830e294f0496c47f7d302ed2f5",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_053bd86ebca249e98a492cb3b80486eb",
+			"created": 1536022436365,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1536022081430,
+			"modified": 1536022442369,
+			"name": "Scenario 5 - Minor - NY - PLATINUM",
+			"parentId": "fld_a16cd9830e294f0496c47f7d302ed2f5",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_837bb67fc41a42389a6e365eeb8e1319",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 1,\n\t\t\t\t\"age\" : 14,\n\t\t\t\t\"stateCode\" : \"VA\",\n\t\t\t\t\"status\" : \"SILVER\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536021957541,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_748f4af63ba94a61b55493d92907d1cd",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_bdb9b52885c742e0955c3980e5c70b98",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_93e031c7b7f84fbdbade167954172478",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_a343633522b049f2b7be1c26b99dc029",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022038952,
+			"method": "POST",
+			"modified": 1536022047129,
+			"name": "1st",
+			"parameters": [],
+			"parentId": "fld_4cf9554a643043fab57d84b858f7164e",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_dd5b218949e5443f97101bc7ad786805",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 2,\n\t\t\t\t\"age\" : 14,\n\t\t\t\t\"stateCode\" : \"VA\",\n\t\t\t\t\"status\" : \"SILVER\",\n\t\t\t\t\"answer\" : \"Merchandise\"\n\t\t\t\t\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536021987677,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_a2b409dddfe4450f8c30e034427c175a",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_2011bceee4d5445590107dac72d5ecdb",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_e456e43032764072b94a4b4c80c5cb6a",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_6dd771c308fa458fb8fbf1df1b4575f0",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022038927,
+			"method": "POST",
+			"modified": 1536022050017,
+			"name": "2nd",
+			"parameters": [],
+			"parentId": "fld_4cf9554a643043fab57d84b858f7164e",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f84dde0df57444f682846ff5f430a2c7",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 3,\n\t\t\t\t\"age\" : 14,\n\t\t\t\t\"stateCode\" : \"VA\",\n\t\t\t\t\"status\" : \"SILVER\",\n\t\t\t\t\"isMinor\" : \"true\",\n\t\t\t\t\"answer\" : \"true\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022012338,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_58a649467d2f473fa8e4cefc7c7b181b",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_c8179ffd930c46daa03a7f14cf78c1e3",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_456dc393c2ab46a1bf1c14368eda7c07",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_6d47b8b5b49e422f955953a77b6cba91",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022038914.5,
+			"method": "POST",
+			"modified": 1536022051900,
+			"name": "3rd",
+			"parameters": [],
+			"parentId": "fld_4cf9554a643043fab57d84b858f7164e",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_fb7648175b344f699d451f7b12ab7c62",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 4,\n\t\t\t\t\"age\" : 14,\n\t\t\t\t\"stateCode\" : \"VA\",\n\t\t\t\t\"status\" : \"SILVER\",\n\t\t\t\t\"isMinor\" : \"true\",\n\t\t\t\t\"answer\" : \"true\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022038902,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c57d445d96c44ca0ab1d053f673a1d2c",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_3b5cbbc8d6bf4e68a5144de15cf770cf",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_bd5fcb6e8b4a42569476629e65c43014",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_69e7971777e4476d872a4576f17cd0a0",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022038902,
+			"method": "POST",
+			"modified": 1536022095144,
+			"name": "4th",
+			"parameters": [],
+			"parentId": "fld_4cf9554a643043fab57d84b858f7164e",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b78a7646670344b9a93ca60750a6afcf",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 1,\n\t\t\t\t\"age\" : 15,\n\t\t\t\t\"stateCode\" : \"CA\",\n\t\t\t\t\"status\" : \"SILVER\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022104119,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_ce704b7195e948d28a8e9ce8cc9eefe9",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_0708adc2f5b54f408268a7959f1ecacf",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_6545b003f6404595bf3e7da3383d1bd9",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_1ce68eb759ee4dc89fdaba7b758d7c9b",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022140670,
+			"method": "POST",
+			"modified": 1536022158791,
+			"name": "1st",
+			"parameters": [],
+			"parentId": "fld_f568a3174aac47b6a569b62150719c78",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_07b8328ac10c45d383add243c4e154ad",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 2,\n\t\t\t\t\"age\" : 15,\n\t\t\t\t\"stateCode\" : \"CA\",\n\t\t\t\t\"status\" : \"SILVER\",\n\t\t\t\t\"answer\" : \"Merchandise\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022128886,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_dae80cd873fb4a91b87e1ae7d1d12c3b",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_a9c81e0cb6ba45878623d088388ef4be",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_a34319b164354b5390966e3c8bb9ade5",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_04475364cf2c43a1992870196342bbb4",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022146562,
+			"method": "POST",
+			"modified": 1536022161193,
+			"name": "2nd",
+			"parameters": [],
+			"parentId": "fld_f568a3174aac47b6a569b62150719c78",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_fc978abe35824a5c9c8c94897a14d9ac",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 3,\n\t\t\t\t\"age\" : 15,\n\t\t\t\t\"stateCode\" : \"CA\",\n\t\t\t\t\"status\" : \"SILVER\",\n\t\t\t\t\"isMinor\" : \"true\",\n\t\t\t\t\"answer\" : \"true\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022152454,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_269933a73a714f5db227f519a1a611d4",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_967dc0476f094e41a52ad18145edc45b",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_6e336b2316244c2c9dda53d188f08e4f",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_d3e99c17f0a44c6bb687beb64350417b",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022152454,
+			"method": "POST",
+			"modified": 1536022208823,
+			"name": "3rd",
+			"parameters": [],
+			"parentId": "fld_f568a3174aac47b6a569b62150719c78",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f0c8389b4fe047fea52dadf4991560eb",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 1,\n\t\t\t\t\"age\" : 20,\n\t\t\t\t\"stateCode\" : \"CT\",\n\t\t\t\t\"status\" : \"SILVER\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022215510,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_8b3334b48c4048cfae0b591496db6403",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_5a1937710eae44d9bf7e7a4aca52b0a7",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_9fa5301c916f4070b2ba8cbf6cb304b7",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_a1eff4076c7f4d46926c3a97e3c5950c",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022261415,
+			"method": "POST",
+			"modified": 1536022267289,
+			"name": "1st",
+			"parameters": [],
+			"parentId": "fld_1528e089f8c44d7fa4d19950dd317b65",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_e9c3071dd80a450f884c755a7429d0e2",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 2,\n\t\t\t\t\"age\" : 20,\n\t\t\t\t\"stateCode\" : \"CT\",\n\t\t\t\t\"status\" : \"SILVER\",\n\t\t\t\t\"answer\" : \"Merchandise\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022239275,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_65fab72e02034737a680f2e6bcc9f7aa",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_54afc016218a4dc0ad652a21b90c53e1",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_a0e85debf26d499eb0b217bb35cd9b33",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_1a20be8d5b86443d9f26e33951427585",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022261390,
+			"method": "POST",
+			"modified": 1536022269213,
+			"name": "2nd",
+			"parameters": [],
+			"parentId": "fld_1528e089f8c44d7fa4d19950dd317b65",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_2b04557390fd48389bee13fddb3759e2",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 3,\n\t\t\t\t\"age\" : 20,\n\t\t\t\t\"stateCode\" : \"CT\",\n\t\t\t\t\"status\" : \"SILVER\",\n\t\t\t\t\"isMinor\" : \"true\",\n\t\t\t\t\"answer\" : \"true\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022261365,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e77e098e44fb40a3b0a46b2c80c98c2e",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_819fca65174c4747a21e5aa21f395377",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_50907ac2e7ce4925ba1adeb204d86797",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_fce1df31ed1e45069bb6b7817cdb6cae",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022261365,
+			"method": "POST",
+			"modified": 1536022264645,
+			"name": "3rd",
+			"parameters": [],
+			"parentId": "fld_1528e089f8c44d7fa4d19950dd317b65",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_9f69a920847a40a2879de706964e503f",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 1,\n\t\t\t\t\"age\" : 18,\n\t\t\t\t\"stateCode\" : \"VA\",\n\t\t\t\t\"status\" : \"GOLD\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022332027,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_acf722de5f1a420c9aa3e91b24e0ee41",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_c15511a82ae04decb2788d4a6464ead6",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_cbcf3d586d2c4fb6ba3bef8075db3737",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_be75374591db476b93fa199a7d2f28e5",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022395346,
+			"method": "POST",
+			"modified": 1536022401992,
+			"name": "1st",
+			"parameters": [],
+			"parentId": "fld_afa85f81f55e43adaea6ce577074157c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_6118e2f6ad4b4ad98cd651f9a48cd143",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 2,\n\t\t\t\t\"age\" : 18,\n\t\t\t\t\"stateCode\" : \"VA\",\n\t\t\t\t\"status\" : \"GOLD\",\n\t\t\t\t\"answer\" : \"Double Billed\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022353278,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_f9a43165cb294189a25b6d5f47d246b6",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_b8cdec5dd50a4aaa85bdb55aa5b5a870",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_af0f5ffcf6f64aa3a2062a3a44f96992",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_6024a7c46d9a4bc3950a94acca3d622d",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022395321,
+			"method": "POST",
+			"modified": 1536022404520,
+			"name": "2nd",
+			"parameters": [],
+			"parentId": "fld_afa85f81f55e43adaea6ce577074157c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b17c7c89e0f74257b63596bbdc14d86a",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 3,\n\t\t\t\t\"age\" : 18,\n\t\t\t\t\"stateCode\" : \"VA\",\n\t\t\t\t\"status\" : \"GOLD\",\n\t\t\t\t\"answer\" : \"true\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022373857,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e45928629a6241389e0ac07de49c4c7e",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_8d2d4e48828b4a8d8e69f78a8b5359cf",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_63c6a41467494002a73670138f1bbced",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_24cc02bdbfa449e388a35d0d1b89df08",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022395308.5,
+			"method": "POST",
+			"modified": 1536022406554,
+			"name": "3rd",
+			"parameters": [],
+			"parentId": "fld_afa85f81f55e43adaea6ce577074157c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_59b45831ab3647f0b681e1bc6a7d892c",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 4,\n\t\t\t\t\"age\" : 18,\n\t\t\t\t\"stateCode\" : \"VA\",\n\t\t\t\t\"status\" : \"GOLD\",\n\t\t\t\t\"answer\" : \"true\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022395296,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_f5eb025b45d24e7fa6e701e183fd5649",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_82842841e2c04aafa744c648f2d4d490",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_70c72aba554646818ae63eb1ec863157",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_f9eedb71cf6b4948bcd101d85b818631",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022395296,
+			"method": "POST",
+			"modified": 1536022457869,
+			"name": "4th",
+			"parameters": [],
+			"parentId": "fld_afa85f81f55e43adaea6ce577074157c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_90602ead12f8455fbe99ddbeacc0000e",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 1,\n\t\t\t\t\"age\" : 18,\n\t\t\t\t\"stateCode\" : \"NY\",\n\t\t\t\t\"status\" : \"PLATINUM\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022465300,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e7e0f7b1fa504131958e609fabffb9af",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_cdc14a5e06284064a8fc6bc92e181e77",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_ca403cbabd604ba3b1841ab33e89906d",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_b19a5b153c194cfdaa47e8af03f4e4c9",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022540742,
+			"method": "POST",
+			"modified": 1536022547323,
+			"name": "1st",
+			"parameters": [],
+			"parentId": "fld_053bd86ebca249e98a492cb3b80486eb",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_9288efc0421b4315932d1a64f806304b",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 2,\n\t\t\t\t\"age\" : 18,\n\t\t\t\t\"stateCode\" : \"NY\",\n\t\t\t\t\"status\" : \"PLATINUM\",\n\t\t\t\t\"answer\" : \"Merchandise\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022492291,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_11caf3ab9a8d42048397169ea7ea1f2c",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_b19aacb3f44d42dabcc51f23183f29cb",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_e3384a04aee34f1b8a85cd494dafd9ed",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_314c3f8eca1e421dbfa82ba8261224b2",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022540717,
+			"method": "POST",
+			"modified": 1536022549491,
+			"name": "2nd",
+			"parameters": [],
+			"parentId": "fld_053bd86ebca249e98a492cb3b80486eb",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_9a9a7845c67f4e6bbf5704ee3795cec4",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 3,\n\t\t\t\t\"age\" : 18,\n\t\t\t\t\"stateCode\" : \"NY\",\n\t\t\t\t\"status\" : \"PLATINUM\",\n\t\t\t\t\"isMinor\": \"true\",\n\t\t\t\t\"answer\" : \"true\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022516625,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_0bd864f80ac549e6adc9ce28c82c5407",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_1c12ef101bed476e9d3d89048e44f4f9",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_60a3a9ac2ff14608949bc8dcaee56f53",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_1c3a3e77f36a4c088137ca53ee798341",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022540704.5,
+			"method": "POST",
+			"modified": 1536022551419,
+			"name": "3rd",
+			"parameters": [],
+			"parentId": "fld_053bd86ebca249e98a492cb3b80486eb",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		},
+		{
+			"_id": "req_de4a842f1ba34dceb6118219a66fa1f7",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\n{\n  \"lookup\" : null,\n  \"commands\" : [ {\n    \"insert\" : {\n\t\t\t\"object\" : {\"com.fsi.creditcarddisputecase.Cardholder\":{\n\t\t\t\t\"questionLevel\" : 4,\n\t\t\t\t\"age\" : 18,\n\t\t\t\t\"stateCode\" : \"NY\",\n\t\t\t\t\"status\" : \"PLATINUM\",\n\t\t\t\t\"isMinor\": \"true\",\n\t\t\t\t\"answer\" : \"true\"\n\t\t\t\t\n}},\n      \n      \"out-identifier\" : \"cardholder\",\n      \"return-object\" : true,\n      \"entry-point\" : \"DEFAULT\",\n      \"disconnected\" : false\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"dynamic-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"dynamic-questions-fired\"\n    }\n  }, {\n    \"get-objects\" : {\n      \"class-object-filter\" : null,\n      \"out-identifier\" : \"test1\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-questions\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-questions-fired\"\n    }\n  }, {\n    \"set-focus\" : {\n      \"name\" : \"cleanup-cardholder\"\n    }\n  }, {\n    \"fire-all-rules\" : {\n      \"max\" : -1,\n      \"out-identifier\" : \"cleanup-cardholder-fired\"\n    }\n  }  ]\n}\n"
+			},
+			"created": 1536022540692,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_0928933c24df4aa38a02dfd3990be955",
+					"name": "accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_c9170c1d949d4b2698d75a316392feb6",
+					"name": "authorization",
+					"value": "Basic cmhwYW1BZG1pbjpQYXNzd29yZEAxMDA="
+				},
+				{
+					"id": "pair_6124964a264a4ebbb037e760232facbb",
+					"name": "content-type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_17e0200babde491c92a8e27d3ae31141",
+					"name": "Cookie",
+					"value": "JSESSIONID=LAJ-Y4bpnHkxsXaEcicsuOOzedB-814UKREHr0SR.vaibhavs-mbp; JSESSIONIDSSO=sx0pyyKTyeGACypOBoA7rMaHbf3rsGoUJZSd-_zM"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1536022540692,
+			"method": "POST",
+			"modified": 1536022544470,
+			"name": "4th",
+			"parameters": [],
+			"parentId": "fld_053bd86ebca249e98a492cb3b80486eb",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/kie-server/services/rest/server/containers/instances/DynamicQuestions_1.0.0",
+			"_type": "request"
+		}
+	]
+}
