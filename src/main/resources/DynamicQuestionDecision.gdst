@@ -742,7 +742,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Double Billed,Paid by Other Means,Service Installation,Missing Credit, Merchandise,Shipping Directory</valueString>
+        <valueString>Double Billed,Paid by Other Means,Service Installation,Missing Credit,Merchandise,Shipping Directory</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
