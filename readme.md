@@ -103,27 +103,27 @@ Below are the instructions to build and deploy PAM projects on Openshift environ
 # Data Objects
 
 ## Cardholder
-Identifier	Type
-age	Integer
-answer	String
-balanceRatio	Float
-incidentCount	Integer
-isMinor	String
-questionLevel	Integer
-stateCode	String
-status	String
+Identifier | Type
+---------- | ----
+age | Integer
+answer | String
+balanceRatio | Float
+incidentCount |	Integer
+isMinor | String
+questionLevel |	Integer
+stateCode | String
+status | String
 
 ## AdditionalInformation
-Identifier	Type
-answerValue	String
-listOptions	String
-questionId	Integer
-questionLevel	Integer
-questionOrder	Integer
-questionPrompt	String
-questionType	String
-
-
+Identifier | Type
+---------- | ----
+answerValue | String
+listOptions | String
+questionId | Integer
+questionLevel | Integer
+questionOrder | Integer
+questionPrompt | String
+questionType | String
  
  
 # Business Rules
