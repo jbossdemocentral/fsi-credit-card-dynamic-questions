@@ -124,7 +124,6 @@ questionLevel | Integer
 questionOrder | Integer
 questionPrompt | String
 questionType | String
- 
  
 # Business Rules
 
@@ -136,7 +135,7 @@ questionType | String
 ## Example: To return multiple questions for a given choice
 For this scenario, on row 2 and 3, the Next Question ID of Cardholder object value is set to 0
 ### API Request
-API Request 
+```
 {
   "lookup" : null,
   "commands" : [ {
@@ -188,10 +187,10 @@ API Request
     }
   }  ]
 }
-
+```
 
 ### API Response
-API Response 
+```
 {
 	"type": "SUCCESS",
 	"msg": "Container DynamicQuestions_1.0.0 successfully called.",
@@ -322,4 +321,4 @@ API Response
 		}
 	}
 }
-Leonardo Consulting © 
+```
