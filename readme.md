@@ -129,39 +129,8 @@ questionType | String
 # Business Rules
 
  
-Scenario-1: Dynamic questions based on rules
-CCD-DynamicQuestionDecision	
-ID	Description	ch: Cardholder	ch: Cardholder	f2 : AdditionalInformation
-		Question Level	Age	State Code	Status	isMinor?	Answer	isMinor?	Question Level	Question Prompt	Question Type	Sequence	UI Dropdown List
-1	Default Questions	1							1	Is the card currently in your possession?	boolean	1	
-2	Default Questions	1							1	Double Billed,Paid by Other Means,Service Installation,Missing Credit, Merchandise,Shipping Directory	boolean	2	
-3	Default Questions	1							1	Did anyone that was authorized on the account possibly make the purchase?	boolean	3	
-4	Default Questions	1							1	Do you recognize the transaction?	boolean	4	
-5	Default Questions - Dispute Amount	1							1	Enter Dispute Amount $	text	5	
-6	Default - Dispute Identification	1							1	What is the reason for your dispute?	list	6	Double Billed,Paid by Other Means,Service Installation,Missing Credit, Merchandise,Shipping Directory
-7	Default - Dispute Resolution	2					Merchandise		2	What is your desired resolution?	list	1	Credit Account,Replace Merchandise,Repair Merchandise,Other
-8	Default - Dispute Resolution Supporting Documents	2					Merchandise		2	Is there any other information, requests, or questions you have regarding your dispute	text	2	
-9	California - Parent / Guardian notification for minors	3	< 16	CA	SILVER,
-GOLD,
-PLATINUM			true	3	Have you notified your parent or guardian about the disputed transactions?	boolean	2	
-10	Virginia - Parent / Guardian notification for minors	3	< 17	VA	SILVER,
-GOLD,
-PLATINUM			true	3	Have you notified your parent or guardian about the disputed transactions?	boolean	2	
-11	All Other States - Parent / Guardian notification for minors	3	< 21	NY,DC,MD	SILVER,
-GOLD,
-PLATINUM			true	3	Have you notified your parent or guardian about the disputed transactions?	boolean	2	
-12	Online Purchase by minor	4		VA, DC, MD	SILVER,
-GOLD,
-PLATINUM	true			4	Were any charges related to online purchases?	boolean	100	
-13	New York - Travel Rule	3		NY	PLATINUM				3	Were you on travel when the disputed charges occurred?	boolean	100	
-14	New York - Travel Rule	4		NY	PLATINUM		true		4	Has the disputed transaction occurred in New York?	boolean	100	
-15	New York - Platinum Privilege	3		NY	PLATINUM				3	Would you like a representative to call you regarding this matter?	boolean	2	
-16	Other States - Gold / Platinum Privilege	4		CA,VA,DC,MD	GOLD,
-PLATINUM				4	Would you like a representative to email you about this matter?	text	100	
-17	Virginia - State Tobacco	3		VA	SILVER,
-GOLD,
-PLATINUM				3	Were any of these charges related to tobacco sales?	boolean	100	
-
+## Scenario-1: Dynamic questions based on rules
+![](images/RulesTable.png)
  
  
 ## Example: To return multiple questions for a given choice
