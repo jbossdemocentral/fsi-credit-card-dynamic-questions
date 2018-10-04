@@ -6,17 +6,16 @@ Dynamic Question Tree
 
  
 # Considerations
-====================================
 
 1.	Dynamic Questions decision table derives the next set of questions based on the answer to the last question (scenario) in the previous set. The Sequence number of the last question is set to 100, this is just to let SA know that it is the last question.
 2.	The UI is designed in such a way that when UI makes the first call to the decision table, it starts with level 1(set 1) and increment the value whenever UI makes another call to keep extracting the questions until it received an empty response.
 
 # Scenarios
-====================================
+
 Below are the scenarios to demonstrate how the changes from the business can be incorporated in a "Dynamic Questions" guided decision table without impacting the UI.
 
 ## Scenario 1
-====================================
+
 ### Description
 Adding more options to the "Dispute Reason" drop-down.
 ### Steps
@@ -26,7 +25,7 @@ Adding more options to the "Dispute Reason" drop-down.
 4.	Follow the steps described in the section "Build & Deployment Instructions" on this page.
 
 ## Scenario 2
-====================================
+
 ### Description
 Adding a new question on Set 1
  
@@ -45,7 +44,7 @@ Adding a new question on Set 1
 7.	Follow the steps described in the section "Build & Deployment Instructions" on this page.
 
 ## Scenario 3
-====================================
+
 ### Description
 Adding a new question on set 2 such that it depends on an answer to a question on set 1.
 Currently, if a user selects  "Dispute Reason" as "Merchandise" in set 1, two extra questions in Set 2 are displayed. In this scenario, we will demonstrate, if a user selects "Double Billed" option in "Dispute Reason" in set 1, then a new question will be asked to a user in set 2.
@@ -62,7 +61,7 @@ Currently, if a user selects  "Dispute Reason" as "Merchandise" in set 1, two ex
 3.	Follow the steps described in the section "Build & Deployment Instructions" on this page.
 
 ## Scenario 4
-====================================
+
 ### Description
 Adding new level.
  
@@ -78,7 +77,7 @@ Adding new level.
 4.	Follow the steps described in the section "Build & Deployment Instructions" on this page.
 
 # Build & Deployment Instructions
-====================================
+
 The way PAM projects are built and deployed on the local machine is different to the way they are deployed to OpenShift environment.
 Below are the instructions to build and deploy PAM projects on Openshift environment:
 •	Copy the Deployment Unit name of the PAM project you want to build and deploy and save it somewhere. To copy the name, navigate to Menu → Execution Servers and you will see deployment units like below: for example, I copied "DynamicQuestions_1.0.0"
@@ -97,7 +96,7 @@ o	Refresh the page to ensure that the deployment unit is removed.
  
  
 # Data Objects
-====================================
+
 ## Cardholder
 Identifier	Type
 age	Integer
@@ -123,7 +122,7 @@ questionType	String
  
  
 # Business Rules
-====================================
+
  
 Scenario-1: Dynamic questions based on rules
 CCD-DynamicQuestionDecision	
