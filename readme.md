@@ -86,19 +86,19 @@ Adding new level.
 The way PAM projects are built and deployed on the local machine is different to the way they are deployed to OpenShift environment.
 Below are the instructions to build and deploy PAM projects on Openshift environment:
 * Copy the Deployment Unit name of the PAM project you want to build and deploy and save it somewhere. To copy the name, navigate to Menu → Execution Servers and you will see deployment units like below: for example, I copied "DynamicQuestions_1.0.0"
- 
+![](images/DeploymentUnit.png)
 * Stay on the same page as above and remove the Deployment Unit. To remove the deployment unit, select the deployment unit you want to remove and do the following: 
 	* Stop the server and refresh the page to make sure that server is stopped.
 	* Once the server is stopped, remove the deployment unit by clicking on "Remove" button.
 	* Refresh the page to ensure that the deployment unit is removed.
 * Now go back to the PAM project you made changes. Increase the version from the current version to next version. To increase the version, navigate to Menu → Projects → <project name> → Settings. Increase the version on the version field and save your changes.
- 
+![](images/DynamicQuestions.png)
 * Build and Deploy the project.
 * Navigate to Menu → Execution Servers and you will see deployment units along with the newly deployed project with the version number you provided. Example → "DynamicQuestions_1.0.3". This means that the endpoint of your project is also changed, this is not ideal for real-world scenario, therefore, we will delete this deployment unit and deploy the project manually with the latest version but old name so that the end point remains the same.
 * To delete the newly deployed deployment unit, follow Step 2.
 * After completing Step 2, stay on the Deployment Unit screen and click on "Add Deployment Unit" option.
 * Select the deployment unit which you deleted on Step 6 and click on "Select" button. Change the name of the deployment unit with the name you copied on Step 1 and click on "Finish" button. This will deploy the latest changes without impacting the end-point.
- 
+![](images/NewDeploymentUnit.png)
  
 # Data Objects
 
