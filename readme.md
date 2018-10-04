@@ -28,7 +28,8 @@ Adding more options to the "Dispute Reason" drop-down.
 
 ### Description
 Adding a new question on Set 1
- 
+
+
 ### Steps
 1.	Currently, there are total six questions in Set 1 and as part of this scenario, we will add one new question after question five "Enter Dispute Amount $".
 2.	In this scenario, we need to make sure that the new question is part of Set 1(Question Level) and the order of this question is set appropriately.
